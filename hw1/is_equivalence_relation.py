@@ -31,21 +31,21 @@ assert is_equivalence_relation(set_of_items_1, relation_1) == True
 
 # Test Case 2
 set_of_items_2 = (1, 2, 3)
-relation_2 = ((1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (2, 3), (3, 2), (1, 3))
+relation_2 = ((1, 1), (2, 2), (3, 3), (1, 2), (2, 3), (1, 3))
 # This relation is reflexive and transitive but not symmetric.
 assert is_equivalence_relation(set_of_items_2, relation_2) == False
 
 # Test Case 3
 set_of_items_3 = (1, 2, 3)
 relation_3 = ((1, 2), (2, 1), (2, 3), (3, 2))
-# This relation is not reflexive, symmetric, or transitive.
+# This relation is not reflexive, symmetric, and not transitive.
 assert is_equivalence_relation(set_of_items_3, relation_3) == False
 
 # Test Case 4
-set_of_items_4 = (1, 2)
-relation_4 = ((1, 1), (2, 2), (1, 2), (2, 1))
+set_of_items_4 = (1, 2, 3)
+relation_4 = ((1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (2, 3), (3, 2))
 # This relation is reflexive and symmetric but not transitive.
-assert is_equivalence_relation(set_of_items_4, relation_4) == True
+assert is_equivalence_relation(set_of_items_4, relation_4) == False
 
 # Test Case 5
 set_of_items_5 = (1, 2, 3)
@@ -78,7 +78,7 @@ relation_9 = ((1, 1), (2, 2), (1, 2), (2, 1))
 assert is_equivalence_relation(set_of_items_9, relation_9) == True
 
 # Test Case 10
-set_of_items_10 = (1, 2)
-relation_10 = ((1, 1), (2, 2), (1, 2))
+set_of_items_10 = (1, 2, 3, 4)
+relation_10 = ((1, 2), (2, 3), (1, 3), (2, 1), (3, 2), (3, 1), (1, 1), (2, 2), (3, 3))
 # This relation is symmetric and transitive but not reflexive.
 assert is_equivalence_relation(set_of_items_10, relation_10) == False
