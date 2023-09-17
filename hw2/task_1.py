@@ -19,5 +19,4 @@ def graph_building(set_of_items: tuple, rel: tuple):
 # Test Case 1
 set_of_items_1 = ('a', 'b', 'c', 'd', 'e')
 relation_1 = (('a', 'b'), ('b', 'd'), ('d', 'c'), ('c', 'e'), ('d', 'e'))
-# This relation is reflexive, symmetric, and transitive.
 graph_building(set_of_items_1, relation_1)
